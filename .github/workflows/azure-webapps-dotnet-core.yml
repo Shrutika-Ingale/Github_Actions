@@ -72,7 +72,7 @@ jobs:
     needs: build
     environment:
       name: 'Development'
-      url: ${{ https://gitub-actions-vnr.azurewebsites.net }}
+      url: 'https://gitub-actions-vnr.azurewebsites.net'
 
     steps:
       - name: Download artifact from build job
