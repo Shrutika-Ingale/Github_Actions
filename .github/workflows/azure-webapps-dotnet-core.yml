@@ -78,6 +78,14 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: .net-app
+          
+      - name: 'Az CLI login with subscription'
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+          
+      - run: |
+          az account show
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
