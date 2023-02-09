@@ -55,6 +55,7 @@ jobs:
 
       - name: Build with dotnet
         run: dotnet build --configuration Release --no-restore
+        working-directory: WebApplication1
 
       - name: dotnet publish
         run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
